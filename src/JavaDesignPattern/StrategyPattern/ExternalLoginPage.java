@@ -1,11 +1,12 @@
 package JavaDesignPattern.StrategyPattern;
 
-import JavaDesignPattern.Models.Customer;
 
-public class ExternalLoginPage implements LoginStrategy<Customer> {
+import JavaDesignPattern.Models.User;
+
+public class ExternalLoginPage implements LoginStrategy {
 
     @Override
-    public void loginWithCredential(Customer customer) {
+    public void loginWithCredential(User customer) {
         System.out.println("Desc: External login strategy");
         System.out.println("1. Username: " + customer.getUsername());
         System.out.println("2. Password: " + customer.getPassword());

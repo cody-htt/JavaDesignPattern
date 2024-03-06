@@ -10,8 +10,8 @@ public class BaseTest {
     private final Customer externalUser;
 
     public BaseTest() {
-        internalUser = new Admin("I-123", "D-123", "Admin");
-        externalUser = new Customer("John", "Doe", "customer@email.com", "123456789");
+        internalUser = new Admin("ID-123", "DEP-123", "Admin");
+        externalUser = new Customer("John", "Doe", "John.Doe@email.com", "123456789");
     }
 
     public Admin getInternalUser() {

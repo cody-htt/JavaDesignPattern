@@ -2,7 +2,7 @@ package JavaDesignPattern.TemplateMethodPattern;
 
 import JavaDesignPattern.Models.Admin;
 
-public class InternalLoginPage extends LoginPage<Admin> {
+public class InternalLoginPage extends LoginPage {
 
     public InternalLoginPage(Admin user) {
         super(user);

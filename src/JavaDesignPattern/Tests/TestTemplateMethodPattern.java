@@ -2,7 +2,7 @@ package JavaDesignPattern.Tests;
 
 import JavaDesignPattern.TemplateMethodPattern.ExternalLoginPage;
 import JavaDesignPattern.TemplateMethodPattern.InternalLoginPage;
-import JavaDesignPattern.TemplateMethodPattern.LoginFlowController;
+import JavaDesignPattern.TemplateMethodPattern.LoginFlow;
 
 public class TestTemplateMethodPattern extends BaseTest {
 
@@ -12,10 +12,11 @@ public class TestTemplateMethodPattern extends BaseTest {
         InternalLoginPage internalLoginPage = new InternalLoginPage(test.getInternalUser());
         ExternalLoginPage externalLoginPage = new ExternalLoginPage(test.getExternalUser());
 
-        LoginFlowController loginFlowController = new LoginFlowController();
+        LoginFlow loginFlow = new LoginFlow();
 
-        loginFlowController.performLogin(internalLoginPage);
+        loginFlow.performLogin(internalLoginPage);
         System.out.println("\n===================================\n");
-        loginFlowController.performLogin(externalLoginPage);
+        loginFlow.performLogin(externalLoginPage);
+
     }
 }

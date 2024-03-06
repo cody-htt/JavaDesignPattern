@@ -1,11 +1,11 @@
 package JavaDesignPattern.StrategyPattern;
 
-import JavaDesignPattern.Models.Admin;
+import JavaDesignPattern.Models.User;
 
-public class InternalLoginPage implements LoginStrategy<Admin> {
+public class InternalLoginPage implements LoginStrategy {
 
     @Override
-    public void loginWithCredential(Admin admin) {
+    public void loginWithCredential(User admin) {
         System.out.println("Desc: Internal login strategy");
         System.out.println("1. Username: " + admin.getUsername());
         System.out.println("2. Password: " + admin.getUsername());

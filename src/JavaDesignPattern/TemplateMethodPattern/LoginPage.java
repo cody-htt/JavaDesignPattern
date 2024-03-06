@@ -2,14 +2,14 @@ package JavaDesignPattern.TemplateMethodPattern;
 
 import JavaDesignPattern.Models.User;
 
-public abstract class LoginPage<T extends User> {
-    protected T user;
+public abstract class LoginPage {
+    protected User user;
 
-    public LoginPage(T user) {
+    public LoginPage(User user) {
         this.user = user;
     }
 
-    public final void loginWithCredential() {
+    protected final void loginWithCredential() {
         inputUsername();
         inputPassword();
         clickLoginButton();
