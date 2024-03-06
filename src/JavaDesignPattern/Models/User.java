@@ -5,19 +5,10 @@ public abstract class User {
     protected String username;
     protected String password;
 
-    public String getUsername() {
-        return username;
-    }
+    public abstract String getUsername();
 
-    public String getPassword() {
-        return password;
-    }
+    public abstract String getPassword();
 
-    public String toString() {
-        return "User{" +
-                "username='" + username + '\'' +
-                ", password='" + password + '\'' +
-                '}';
-    }
-    
+    public abstract String toString();
+
 }

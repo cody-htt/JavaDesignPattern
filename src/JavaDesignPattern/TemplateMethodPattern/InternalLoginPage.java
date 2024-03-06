@@ -1,10 +1,10 @@
 package JavaDesignPattern.TemplateMethodPattern;
 
-import JavaDesignPattern.Models.AdminModel;
+import JavaDesignPattern.Models.Admin;
 
-public class InternalLoginPage extends LoginPage<AdminModel> {
+public class InternalLoginPage extends LoginPage<Admin> {
 
-    public InternalLoginPage(AdminModel user) {
+    public InternalLoginPage(Admin user) {
         super(user);
     }
 

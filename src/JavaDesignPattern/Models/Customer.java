@@ -1,13 +1,13 @@
 package JavaDesignPattern.Models;
 
-public class CustomerModel extends User {
+public class Customer extends User {
 
     private final String firstName;
     private final String lastName;
     private final String email;
     private final String phone;
 
-    public CustomerModel(String firstName, String lastName, String email, String phone) {
+    public Customer(String firstName, String lastName, String email, String phone) {
         this.username = "customer";
         this.password = "customer123";
         this.firstName = firstName;
@@ -17,8 +17,18 @@ public class CustomerModel extends User {
     }
 
     @Override
+    public String getUsername() {
+        return this.username;
+    }
+
+    @Override
+    public String getPassword() {
+        return this.password;
+    }
+
+    @Override
     public String toString() {
-        return "CustomerModel{" +
+        return "Customer{" +
                 "firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", email='" + email + '\'' +

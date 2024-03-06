@@ -1,12 +1,12 @@
 package JavaDesignPattern.Models;
 
-public class AdminModel extends User {
+public class Admin extends User {
 
     private final String adminId;
     private final String departmentId;
     private final String role;
 
-    public AdminModel(String adminId, String departmentId, String role) {
+    public Admin(String adminId, String departmentId, String role) {
         this.username = "admin";
         this.password = "admin123";
         this.adminId = adminId;
@@ -15,8 +15,18 @@ public class AdminModel extends User {
     }
 
     @Override
+    public String getUsername() {
+        return this.username;
+    }
+
+    @Override
+    public String getPassword() {
+        return this.password;
+    }
+
+    @Override
     public String toString() {
-        return "AdminModel{" +
+        return "Admin{" +
                 "adminId='" + adminId + '\'' +
                 ", departmentId='" + departmentId + '\'' +
                 ", role='" + role + '\'' +

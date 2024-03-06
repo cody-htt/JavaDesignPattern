@@ -1,10 +1,10 @@
 package JavaDesignPattern.TemplateMethodPattern;
 
-import JavaDesignPattern.Models.CustomerModel;
+import JavaDesignPattern.Models.Customer;
 
-public class ExternalLoginPage extends LoginPage<CustomerModel> {
+public class ExternalLoginPage extends LoginPage<Customer> {
 
-    public ExternalLoginPage(CustomerModel user) {
+    public ExternalLoginPage(Customer user) {
         super(user);
     }
 

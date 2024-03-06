@@ -1,7 +1,7 @@
 package JavaDesignPattern.Tests;
 
-import JavaDesignPattern.Models.AdminModel;
-import JavaDesignPattern.Models.CustomerModel;
+import JavaDesignPattern.Models.Admin;
+import JavaDesignPattern.Models.Customer;
 import JavaDesignPattern.StrategyPattern.*;
 
 public class TestStrategyPattern extends BaseTest {
@@ -12,12 +12,12 @@ public class TestStrategyPattern extends BaseTest {
         InternalLoginPage internalLoginPage = new InternalLoginPage();
         ExternalLoginPage externalLoginPage = new ExternalLoginPage();
 
-        LoginFlowController<AdminModel> internalLogin = new LoginFlowController<>(internalLoginPage);
+        LoginFlowController<Admin> internalLogin = new LoginFlowController<>(internalLoginPage);
         internalLogin.performLogin(test.getInternalUser());
 
         System.out.println("\n===================================\n");
 
-        LoginFlowController<CustomerModel> externalLogin = new LoginFlowController<>(externalLoginPage);
+        LoginFlowController<Customer> externalLogin = new LoginFlowController<>(externalLoginPage);
         externalLogin.performLogin(test.getExternalUser());
     }
 }

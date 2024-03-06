@@ -1,24 +1,24 @@
 package JavaDesignPattern.Tests;
 
 
-import JavaDesignPattern.Models.AdminModel;
-import JavaDesignPattern.Models.CustomerModel;
+import JavaDesignPattern.Models.Admin;
+import JavaDesignPattern.Models.Customer;
 
 public class BaseTest {
 
-    private final AdminModel internalUser;
-    private final CustomerModel externalUser;
+    private final Admin internalUser;
+    private final Customer externalUser;
 
     public BaseTest() {
-        internalUser = new AdminModel("I-123", "D-123", "Admin");
-        externalUser = new CustomerModel("John", "Doe", "customer@email.com",  "123456789");
+        internalUser = new Admin("I-123", "D-123", "Admin");
+        externalUser = new Customer("John", "Doe", "customer@email.com", "123456789");
     }
 
-    public AdminModel getInternalUser() {
+    public Admin getInternalUser() {
         return internalUser;
     }
 
-    public CustomerModel getExternalUser() {
+    public Customer getExternalUser() {
         return externalUser;
     }
 }
