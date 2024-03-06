@@ -44,7 +44,7 @@ classDiagram
         }
         class LoginFlowController{
             -LoginStrategy loginStrategy
-            +performLogin(~T extends User~ user)
+            +performLogin(user: User)
         }
 }
     LoginStrategy <|-- InternalLoginPage : implements
@@ -59,7 +59,7 @@ classDiagram
     namespace TemplateMethodPattern {
         class LoginPage {
             <<Abstract>>
-            #~T extends User~ user
+            #user: User
             +loginWithCredential()
             #inputUsername()*
             #inputPassword()*
@@ -71,7 +71,7 @@ classDiagram
         class ExternalLoginPage {
         }
         class LoginFlowController{
-            +~T extends User~ void performLogin (LoginPage~User~ loginPage)
+            +performLogin (LoginPage loginPage)
         }
     }
     LoginPage <|-- InternalLoginPage : extends
